@@ -1,0 +1,289 @@
+<form class="signup-form" method="POST" action="{{Route('signup')}}">
+    @csrf
+    <div id="signup-type" class="signup-type">
+        <p>Sign Up as</p>
+        <div>
+            <input type="radio" name="signupType" value="user" id="user" checked>
+            <label for="">User</label>
+            <input type="radio" name="signupType" value="business" id="business">
+            <label for="">Business</label>
+            <input type="radio" name="signupType" value="professional" id="professional">
+            <label for="">Professional</label>
+        </div>
+    </div>
+    <div id="user-section" class="user-section">
+        <div class="user user-section1">
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">First Name</label>
+                    <input class="@error('firstname') is-invalid @enderror" type="text" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus placeholder="Enter First Name">
+                    @error('firstname')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="input-form">
+                    <label for="">Last Name</label>
+                    <input class="@error('lastname') is-invalid @enderror" type="text" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus placeholder="Enter First Name">
+                    @error('lastname')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                </div>
+                <div class="input-form">
+                    <label for="">Email</label>
+                    <input class="@error('email') is-invalid @enderror" type="email" name="email" value="{{ old('email') }}" required autocomplete="email"  placeholder="Email">
+                </div>
+                <div class="input-form">
+                    <label for="">Date of Birth</label>
+                    <input class="@error('date_of_birth') is-invalid @enderror" type="date" name="date_of_birth" value="{{ old('date_of_birth') }}" required autocomplete="date_of_birth" autofocus>
+                </div>
+                <div class="input-form">
+                    <label for="">Password</label>
+                    <input class="@error('password') is-invalid @enderror" type="password" name="password" required autocomplete="new-password"  id="password" placeholder="Password">
+                    <i id="show" class="fa-solid fa-eye-slash"></i>
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <p style="font-size: 10px">{{ $message }}</p>
+                        </span>
+                    @enderror
+                </div>
+                <div class="input-form">
+                    <label for="">Confirm Password</label>
+                    <input class="" type="password" name="password_confirmation" id="con-password" required autocomplete="new-password placeholder="Confirm Password">
+                    <i id="con-show" class="fa-solid fa-eye-slash"></i>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="user user-section2">
+            <div class="signup-type">
+                <p>Gender</p>
+                <div>
+                    <input type="radio" name="gender" id="" checked>
+                    <label for="">Male</label>
+                    <input type="radio" name="gender" id="">
+                    <label for="">Female</label>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">Telephone</label>
+                    <input type="text" name="telephone" id="" placeholder="Enter Telephone no.">
+                </div>
+                <div class="input-form">
+                    <label for="">Address</label>
+                    <input type="text" name="address" id="" placeholder="Enter Address">
+                </div>
+                <div class="input-form">
+                    <label for="">Category Interested In</label>
+                    <select name="category" id="">
+
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">Country</label>
+                    <select id="country" name="country">
+                        <option value="" selected disabled>Select Country</option>
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">State</label>
+                    <select name="state" id="state"></select>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="userPrevBtn">Back</button>
+            <button type="button" id="userNextBtn">Next</button>
+            <button type="submit" id="userSubmitBtn">Submit</button>
+        </div>
+    </div>
+</form>
+<form action="{{route('register')}}" method="POST" class="signup-form" id="business-section">
+    @csrf
+    <div>
+        <div class="business user-section1">
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">Business Name</label>
+                    <input type="text" name="businessname" id="" placeholder="Enter First Name">
+                </div>
+                <div class="input-form">
+                    <label for="">Business Email</label>
+                    <input type="email" name="businessemail" id="" placeholder="Enter First Name">
+                </div>
+                <div class="input-form">
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <i id="show" class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-form">
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="" id="con-password" placeholder="Confirm Password">
+                    <i id="con-show" class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-form">
+                    <label for="">Telephone</label>
+                    <input type="number" name="telephone" id="" placeholder="Enter Telephone Number">
+                </div>
+                <div class="input-form">
+                    <label for="">Website</label>
+                    <input type="text" name="website" id="" placeholder="Enter Website">
+                </div> 
+                
+            </div>
+        </div>
+        <div style="margin-top: -20px" class="business user-section2">
+            <div class="signup-type2">
+                <p>Business Type</p>
+                <div>
+                    <input type="checkbox" value="training providers" name="business_type" id="" checked>
+                    <label for="">Training Providers</label>
+                    <input type="checkbox" value="consultant" name="business_type" id="">
+                    <label for="">Consultant</label>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">Address</label>
+                    <input type="text" name="address" id="" placeholder="Enter Address">
+                </div>
+                <div class="input-form">
+                    <label for="">Country</label>
+                    <select name="country">
+                        
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">State</label>
+                    <select name="state" id="state">
+
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">Specialization</label>
+                    <select name="specialization">
+
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">Contact Person</label>
+                    <input type="text" name="contact_person" id="" placeholder="Contact Person">
+                </div>
+            </div>
+        </div>
+        <div class="business user-section1">
+            <div class="input-container">                           
+            </div>
+            <div class="input-form">
+                <textarea name="description" id="" cols="30" rows="10" maxlength="255" placeholder="Describe Your Business"></textarea>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="businessPrevBtn">Back</button>
+            <button type="button" id="businessNextBtn">Next</button>
+            <button type="submit" id="businessSubmitBtn">Submit</button>
+        </div>
+    </div>
+</form>
+<form action="{{route('register')}}" method="POST" class="signup-form">
+    @csrf
+    <div id="professional-section">
+        <div class="professional user-section1">
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstname" id="" placeholder="Enter First Name">
+                </div>
+                <div class="input-form">
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastname" id="" placeholder="Enter Last Name">
+                </div>
+                <div class="input-form">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="Enter Email">
+                </div>
+                <div class="input-form">
+                    <label for="">Password</label>
+                    <input type="password" name="" id="password" placeholder="Password">
+                    <i id="show" class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-form">
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="" id="con-password" placeholder="Confirm Password">
+                    <i id="con-show" class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-form">
+                    <label for="">Date of Birth</label>
+                    <input class="@error('date_of_birth') is-invalid @enderror" type="date" name="date_of_birth" value="{{ old('date_of_birth') }}" required autocomplete="date_of_birth" autofocus>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: -20px" class="professional user-section2">
+            <div class="signup-type2">
+                <p>Professional Type</p>
+                <div>
+                    <input type="checkbox" name="professional_type" id="" checked>
+                    <label for="">Events Manager</label>
+                    <input type="checkbox" name="professional_type" id="">
+                    <label for="">Facilitators</label>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-form">
+                    <label for="">Address</label>
+                    <input type="text" name="" id="" placeholder="Enter Address">
+                </div>
+                <div class="input-form">
+                    <label for="">Country</label>
+                    <select name="">
+                        
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">State</label>
+                    <select name="" id="state">
+
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">Specialization</label>
+                    <select name="" id="state">
+
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="">Contact Person</label>
+                    <input type="text" name="" id="" placeholder="Contact Person">
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="professionalPrevBtn">Back</button>
+            <button type="button" id="professionalNextBtn">Next</button>
+            <button type="submit" id="professionalSubmitBtn">Submit</button>
+        </div>
+    </div>
+</form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<ol>
+    <li>One</li>
+    <li>One</li>
+    <li>One</li>
+    <li>One</li>
+</ol>
