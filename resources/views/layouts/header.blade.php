@@ -1,25 +1,6 @@
 
 <section id="topsection">
-    <header>
-        <ul class="header-list">
-            @guest
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ url('/signup') }}">Sign-Up</a></li>
-                @if (Auth::check() && Auth::user()->user_type === 'business' && Auth::user()->business->subscription == 'basic listing')
-                <li><a href="#">Go Premium</a></li>
-                 @endif
-                @if (Auth::check() && Auth::user()->user_type === 'user')
-                <li><a href="{{ url('/business-register') }}">Add/Upload</a></li>
-                 @endif
-            @else
-                @if(Auth::user()->email_verified_at)
-                    <p>Welcome, {{ Auth::user()->firstname }}</p>
-                    <li><a href="{{ route('logout') }}">Logout</a></li>
-                @endif
-                <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
-            @endguest
-        </ul>
-    </header>
+
     <nav class="navbar">
         <div class="nav-logo-container">
             <a href="{{route('home')}}"><img class="nav-logo" src="{{asset('assets/images/ntp-logo.png')}}" alt=""></a>
