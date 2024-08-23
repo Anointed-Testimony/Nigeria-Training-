@@ -93,7 +93,7 @@
                         @if ($upload->upload_type == "virtual-program")                    
                             <div class="event-location">{{$upload->host_app}}</div>
                         @else 
-                            <div class="event-location">{{$upload->state}} State, {{$upload->country}}</div>
+                            <div class="event-location">{{$upload->address}}, {{$upload->country}}</div>
                         @endif
                         
                         @if(isset($usInfos[$upload->user_id]))
@@ -184,14 +184,14 @@
         </div>
         <div class="training-provider">
             <div class="training-provider-header">Featured Tutors</div>
-            <div class="training-provider-container">
+            {{-- <div class="training-provider-container">
                 <div class="tutor-box" style="background-image: url('https://c.superprof.com/i/m/14518642/600/20240416130913/14518642.webp')">
                     <div class="tutor-name-container">
                         <p class="tutor-name">Sammad</p>
                         <p class="tutor-category">App Developer</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="training-provider">
             <div class="training-provider-header">Featured Business</div>

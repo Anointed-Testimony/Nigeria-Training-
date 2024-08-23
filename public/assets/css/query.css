@@ -2,7 +2,7 @@
     .hero-image-container{
         width: 65%;
         height: 5%;
-        margin: 70px 0px 0px 0px;
+        margin: 20px 0px 0px 0px;
     }
     .hero-image-container img{
         width: 100%;
@@ -12,10 +12,10 @@
         gap: 10px;
     }
     .hero-section-links-container{
-        margin: 70px 0px 0px 100px;
+        margin: 20px 0px 0px 100px;
     }
     .hero-description{
-        margin: 70px 0px 0px 0px;
+        margin: 20px 0px 0px 0px;
     }
     .navbar{
         gap: 17px;
@@ -71,7 +71,7 @@
         font-size: 14px;
     }
     .hero-section-links-container{
-        margin: 70px 0px 0px 30px;
+        margin: 20px 0px 0px 30px;
         height: auto;
     }
     .hero-image-container{

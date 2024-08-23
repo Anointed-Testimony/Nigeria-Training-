@@ -65,10 +65,12 @@
                 <img src="{{asset("kycdocuments/$kycs->back_document")}}" alt="">
             </a> --}}
         </div>
+        @if ($user->tutor->status == 'pending')
         <div class="kyc_page_button_container">
             <a class="withdraw_approve" href="{{url("/approve/tutor/{$user->tutor->id}")}}">Approve</a>
             <a class="withdraw_reject" href="{{url("/reject/tutor/{$user->tutor->id}")}}">Reject</a>
         </div>
+        @endif
         {{-- @endforeach --}}
     </section>
 @endsection

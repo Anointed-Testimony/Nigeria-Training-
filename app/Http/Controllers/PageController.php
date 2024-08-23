@@ -832,6 +832,7 @@ class PageController extends Controller
      public function admin(){
 
         $alltransactions = Transaction::all();
+        $allUploads = upload::all();
 
         $allUsers = User::where('user_type', 'user')->get();
         $allBusinesses = User::where('user_type', 'business')->get();
@@ -852,7 +853,7 @@ class PageController extends Controller
         $allAds = Ads::all();
         $allCategories = Category::all();
         $defaultImages = DefaultImages::all();
-        return view('pages.admin', compact('usCount','busCount','proCount','workCount','evenCount','virtCount','eCount','alltransactions', 'allUsers','allBusinesses','allProfessionals','pendingWithrawals','pendingKycs','countKyc','countAds','allAds','allnews','allCategories','defaultImages'));
+        return view('pages.admin', compact('usCount','busCount','proCount','workCount','evenCount','virtCount','eCount','alltransactions', 'allUsers','allBusinesses','allProfessionals','pendingWithrawals','pendingKycs','countKyc','countAds','allAds','allnews','allCategories','defaultImages','allUploads'));
     }
 
     public function viewVerification($id){

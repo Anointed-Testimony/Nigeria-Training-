@@ -24,6 +24,7 @@
                     <div id="admin_side-users" class="admin_tab"><i class="fa-solid fa-users"></i>All Users</div>
                     <div id="admin_side-business" class="admin_tab"><i class="fa-solid fa-briefcase"></i>All Business</div>
                     <div id="admin_side-prof" class="admin_tab"><i class="fa-solid fa-user-tie"></i>All Tutors</div>
+                    <div id="admin_side-uploads" class="admin_tab"><i class="fa-solid fa-cloud-arrow-up"></i>All Uploads</div>
                     <div id="admin_side-approve" class="admin_tab"><i class="fa-solid fa-money-bill-transfer"></i>Approve Withdrawals</div>
                     <div id="admin_side-kyc" class="admin_tab"><i class="fa-solid fa-id-card"></i>KYC Verification</div>
                     <div id="admin_side-advert" class="admin_tab"><i class="fa-solid fa-bullseye"></i></i>Advert Manager</div>
@@ -307,6 +308,69 @@
                                     <td>{{$allProfessional->address}}</td>
                                     <td>
                                         <a href="{{url("/view/tutor/$allProfessional->id")}}" class="withdraw_view">View</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="admin_uploads_section">
+                <div class="admin_user-top-subsection">
+                    <p class="transaction_text-heading">All Uploads</p >
+                    <div class="transaction_tabs">
+                        <p class="transaction_tabs_back">All Time</p>
+                        <p>Last 7 days</p>
+                        <p>Last 14 days</p>
+                        <p>Last 30 days</p>
+                    </div>
+                </div>
+                <div class="admin_user_full_section">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Business Details</th>
+                                <th>Upload Type</th>
+                                <th>Upload Name</th>
+                                <th>Featured</th>
+                                <th>Address</th>
+                                {{-- <th>View</th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($allUploads as $allUpload)
+                                <tr>
+                                    <td>
+                                        <div class="user_details_container">
+                                            <div class="user_details_container_logo">
+                                                <img src="{{asset("/storage/users-avatar/{$allUpload->users->avatar}")}}" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="user_details_name">{{$allUpload->users->name}}</p>
+                                                <p class="user_details_email">{{$allUpload->users->email}}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ucfirst($allUpload->upload_type)}}</td>
+                                    <td class="admin_upload_title"><p class="admin_upload_title">{{$allUpload->title}}</p></td>
+                                    @if ($allUpload->featured == 1)
+                                        <td>
+                                            <div style="display:flex; gap:3px">
+                                                <p>True</p> 
+                                                <input checked type="checkbox" name="change_featured" onclick="changeFeatured({{$allUpload->id}})">
+                                            </div>
+                                        </td>
+                                    @else
+                                        <td>
+                                            <div style="display:flex; gap:3px">
+                                                <p>False</p> 
+                                                <input type="checkbox" name="change_featured" onclick="changeFeatured({{$allUpload->id}})">
+                                            </div>
+                                        </td>
+                                    @endif
+                                    <td><p class="admin_upload_title">{{$allUpload->address}}</p></td>
+                                    <td>
+                                        {{-- <a href="{{url("/view/tutor/$allProfessional->id")}}" class="withdraw_view">View</a> --}}
                                     </td>
                                 </tr>
                             @endforeach

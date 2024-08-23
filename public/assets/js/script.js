@@ -673,6 +673,7 @@ if(adminTabs){
   const adminUsers = document.getElementById('admin_side-users')
   const adminBusiness = document.getElementById('admin_side-business')
   const adminProf = document.getElementById('admin_side-prof')
+  const adminUpload = document.getElementById('admin_side-uploads')
   const adminApprove = document.getElementById('admin_side-approve')
   const adminKyc = document.getElementById('admin_side-kyc')
   const adminAdvert = document.getElementById('admin_side-advert')
@@ -689,6 +690,7 @@ if(adminTabs){
   const adminNewsSection = document.getElementById('admin_news_section')
   const adminCategorySection = document.getElementById('category_section')
   const adminSettingSection = document.getElementById('setting_section')
+  const adminUploadsSection  = document.getElementById('admin_uploads_section')
 
   adminUsers.addEventListener('click',(e)=>{
     adminUsers.classList.add('transaction_back')
@@ -711,6 +713,7 @@ if(adminTabs){
     adminNewsSection.style.display = 'none'
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminBusiness.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -733,6 +736,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminProf.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -755,6 +759,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminKyc.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -777,6 +782,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminApprove.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -799,6 +805,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminAdvert.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -821,6 +828,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminNews.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -843,6 +851,7 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminCategory.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -865,6 +874,7 @@ if(adminTabs){
     adminNewsSection.style.display = 'none'
     adminCategorySection.style.display = 'block'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
   adminSettings.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -887,6 +897,7 @@ if(adminTabs){
     adminNewsSection.style.display = 'none'
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'block'
+    adminUploadsSection.style.display = 'none'
   })
   adminDash.addEventListener('click',(e)=>{
     adminUsers.classList.remove('transaction_back')
@@ -908,7 +919,36 @@ if(adminTabs){
     adminCategory.classList.remove('transaction_back')
     adminCategorySection.style.display = 'none'
     adminSettingSection.style.display = 'none'
+    adminUploadsSection.style.display = 'none'
   })
+  adminUpload.addEventListener('click',(e)=>{
+    adminUsers.classList.remove('transaction_back')
+    adminDash.classList.remove('transaction_back')
+    adminUpload.classList.add('transaction_back')
+    adminBusiness.classList.remove('transaction_back')
+    adminProf.classList.remove('transaction_back')
+    adminApprove.classList.remove('transaction_back')
+    adminKyc.classList.remove('transaction_back')
+    adminAdvert.classList.remove('transaction_back')
+    adminNews.classList.remove('transaction_back')
+    adminSettings.classList.remove('transaction_back')
+    adminUploadsSection.style.display = 'block'
+    adminUserSection.style.display = 'none'
+    adminDashSection.style.display = 'none'
+    adminBusSection.style.display = 'none'
+    adminProfSection.style.display = 'none'
+    adminApproveSection.style.display = 'none'
+    adminKycSection.style.display = 'none'
+    admiAdsSection.style.display = 'none'
+    adminCategory.classList.remove('transaction_back')
+    adminCategorySection.style.display = 'none'
+    adminSettingSection.style.display = 'none'
+  })
+}
+
+function changeFeatured(uploadId){
+  fetch(`/update-featured-ad/${uploadId}`)
+  window.location.reload()
 }
 
 const goTo = document.getElementById('go_to_settings')

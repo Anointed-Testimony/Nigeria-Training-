@@ -1911,4 +1911,22 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
         return redirect()->back();
     }
 
+    public function updateFeaturedAds($uploadId){
+        $id = $uploadId;
+
+        $upload = upload::findOrFail($uploadId);
+
+        if($upload->featured == 1){
+            $upload->featured = 0;
+            $upload->save();
+            notify()->success('Featured Ads Unset Successfully');
+            return redirect()->back();
+        }else {
+            $upload->featured = 1;
+            $upload->save();
+            notify()->success('Featured Ads Set Successfully');
+            return redirect()->back();
+        }
+    }
+
 }

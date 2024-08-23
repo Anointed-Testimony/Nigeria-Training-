@@ -55,6 +55,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/admin', [App\Http\Controllers\PageController::class, 'admin'])->name('admin')->middleware('verified');
     Route::get('/admin/withdrawals', [GeneralController::class, 'fetchWithdrawals'])->name('admin.withdrawals');
     Route::get('/participants/{course_id}', [GeneralController::class, 'store'])->name('store.participant');
+    Route::get('/update-featured-ad/{uploadId}', [GeneralController::class, 'updateFeaturedAds'])->name('update.ads');
 });
 Route::get('/{slug_url}/{upload_type}/{id}', [App\Http\Controllers\PageController::class, 'pages'])
     ->where([
