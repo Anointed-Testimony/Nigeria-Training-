@@ -59,22 +59,22 @@
                     <p class="event-date">{{ $result['date'] }}</p>
                     @endif
                     @endforeach
-                    @if ($upload->upload_type == "virtual-program")                    
+                    @if ($upload->upload_type == "virtual-program")
                     <div class="event-location">{{$upload->host_app}}</div>
-                    @else 
+                    @else
                     <div class="event-location">{{$upload->state}} State, {{$upload->country}}</div>
                     @endif
-                    
+
                     @if(isset($usInfos[$upload->user_id]))
                         <div class="company-logo-container">
                             <img class="event-image" src="{{ asset("/storage/users-avatar/{$usInfos[$upload->user_id]->avatar}") }}" alt="">
                         </div>
                     @endif
-            
+
                     @if(isset($busInfos[$upload->user_id]))
                         <div class="company-name">{{$busInfos[$upload->user_id]->businessname}}</div>
                     @endif
-            
+
                     <a class="event-details" href="{{url("/$upload->slug_url/$upload->upload_type/$upload->id")}}">View Details</a>
                 </div>
             @endforeach             --}}
@@ -90,12 +90,12 @@
                                 <p class="event-date">{{ $result['date'] }}</p>
                             @endif
                         @endforeach
-                        @if ($upload->upload_type == "virtual-program")                    
+                        @if ($upload->upload_type == "virtual-program")
                             <div class="event-location">{{$upload->host_app}}</div>
-                        @else 
+                        @else
                             <div class="event-location">{{$upload->state}} State, {{$upload->country}}</div>
                         @endif
-                        
+
                         @if(isset($usInfos[$upload->user_id]))
                             <div class="company-logo-container">
                                 <img class="event-image" src="{{ asset("/storage/users-avatar/{$usInfos[$upload->user_id]->avatar}") }}" alt="">
@@ -110,11 +110,11 @@
                                 @endif
                             </div>
                         @endif
-                        
+
                         @if(isset($busInfos[$upload->user_id]))
                             <div class="company-name">{{$busInfos[$upload->user_id]->businessname}}</div>
                         @endif
-                        
+
                         <a class="event-details" href="{{url("/$upload->slug_url/$upload->upload_type/$upload->id")}}">View Details</a>
                     </div>
                 @endif
@@ -132,9 +132,9 @@
                         </div>
                         <div class="event-title">{{$upload->title}}</div>
                         <p class="event-date">{{ $upload->course_duration}} Hour(s)</p>
-                        @if ($upload->upload_type == "virtual-program")                    
+                        @if ($upload->upload_type == "virtual-program")
                             <div class="event-location">{{$upload->host_app}}</div>
-                        @else 
+                        @else
                             <div class="event-location">{{$upload->state}} State, {{$upload->country}}</div>
                         @endif
 
@@ -163,7 +163,7 @@
             </div>
         </div>
     </div>
-    
+
     <div style="margin-top:50px" class="featured-ads">
         <form class="certificate_verify_form" id="certsearchForm">
             <input type="search" name="certificateId" id="certificateId" placeholder="Verify Certificate">
@@ -231,7 +231,7 @@
 </section>
 <div id="certificateModal" style="display: none;">
     {{-- <div class="container">
-        <img class="frame" src="{{ asset('images/cert.frame.jpg') }}" alt="certification" border="0">  
+        <img class="frame" src="{{ asset('images/cert.frame.jpg') }}" alt="certification" border="0">
         <div class="centered">
             <span style="font-weight:bold">Certificate of Completion</span></br></br>
             <span><i>This is to certify that</i></span>
@@ -305,9 +305,9 @@
                 var featuredBaseUrl = "{{ asset('images/') }}";
                 var resultItem = '<a href="/' + item.slug_url + '/' + item.upload_type + '/' + item.id + '" class="event_results">' +
                                     '<div class="event_results_image_container">' +
-                                        '<img src="' + featuredBaseUrl + '/' + item.featured_image + '" alt="">' + 
+                                        '<img src="' + featuredBaseUrl + '/' + item.featured_image + '" alt="">' +
                                     '</div>' +
-                                    '<p class="search_event_title">' + item.title + '</p>' + 
+                                    '<p class="search_event_title">' + item.title + '</p>' +
                                 '</a>';
                 eventsList.append(resultItem);
             });
@@ -315,9 +315,9 @@
                 var featuredBaseUrl = "{{ asset('images/') }}";
                 var resultItem = '<a href="/' + item.slug_url + '/' + item.upload_type + '/' + item.id + '" class="event_results">' +
                                     '<div class="event_results_image_container">' +
-                                        '<img src="' + featuredBaseUrl + '/' + item.featured_image + '" alt="">' + 
+                                        '<img src="' + featuredBaseUrl + '/' + item.featured_image + '" alt="">' +
                                     '</div>' +
-                                    '<p class="search_event_title">' + item.title + '</p>' + 
+                                    '<p class="search_event_title">' + item.title + '</p>' +
                                 '</a>';
                 workList.append(resultItem);
             });
@@ -329,7 +329,7 @@ $(document).ready(function() {
     $('#certsearchForm').submit(function(e) {
         e.preventDefault();
         var certificateId = $('#certificateId').val();
-        
+
         $.ajax({
             url: '/search-certificate',
             method: 'GET',
@@ -339,7 +339,7 @@ $(document).ready(function() {
                     var certificate = response.certificate;
                     var modalContent = `
                         <div id="cert-show" class="container">
-                            <img class="frame" src="{{ asset('images/cert.frame.jpg') }}" alt="certification" border="0">  
+                            <img class="frame" src="{{ asset('images/cert.frame.jpg') }}" alt="certification" border="0">
                             <div class="centered">
                                 <span style="font-weight:bold">Certificate of Completion</span></br></br>
                                 <span><i>This is to certify that</i></span>
@@ -355,7 +355,7 @@ $(document).ready(function() {
                         </div>
                     `;
                     $('#certificateModal').html(modalContent).show();
-                    
+
                     // Add event listener for clicking outside the modal
                     const certFormShow = document.getElementById('cert-show');
                     const certForm = document.getElementById('certsearchForm');

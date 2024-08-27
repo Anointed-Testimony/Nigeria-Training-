@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Montserrat', sans-serif;                                                   
-    height: 100%; 
-    color: #4B5563;                                      
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    color: #4B5563;
 }
 pre{
     white-space: pre-wrap;
@@ -91,8 +91,8 @@ pre{
     flex-direction: column;
     gap: 15px;
     font-size: 15px;
-    /* transition: all 1s ease-in; */
-    /* animation: fadein 1.5s ease; */
+    transition: all 1s ease-in;
+    animation: fadein 1.5s ease;
 }
 /* @keyframes fadein {
     from{
@@ -191,7 +191,7 @@ pre{
     color: #fff;
 }
 /* .featured{
-    
+
 } */
 .event-details{
     text-align: center;
@@ -206,7 +206,7 @@ pre{
 .featured-section{
     width: 85%;
     height: auto;
-    margin: 30px auto;
+    /* margin: 30px auto; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 30px;
@@ -219,7 +219,7 @@ pre{
 .events-container{
     width: 900px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     margin: 20px 0px 0px 0px;
 }
@@ -293,7 +293,7 @@ pre{
     font-size: 15px;
     font-weight: 700;
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -457,7 +457,7 @@ pre{
     color: purple;
     text-decoration: none;
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -466,7 +466,7 @@ pre{
     color: purple;
     text-decoration: none;
     display: -webkit-box;
-    -webkit-line-clamp: 4; 
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -520,7 +520,7 @@ footer{
       content: "\2022";
     color: #fff;
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
@@ -698,7 +698,7 @@ ul li::before{
     font-weight: bold;
     color: #333;
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -706,7 +706,7 @@ ul li::before{
 .providers-description{
     font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 5; 
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1212,7 +1212,7 @@ select:focus{
     align-items: center;
     gap: 10px;
 }
-.back{    
+.back{
     background-color: #64b74154;
     transition: all 1s;
 }
@@ -1223,13 +1223,13 @@ select:focus{
 }
 .infos p{
     display: -webkit-box;
-    -webkit-line-clamp: 5; 
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 /* #allupload-section{
-    
+
 } */
 .allupload-courses{
     display: flex;
@@ -1748,18 +1748,18 @@ textarea:focus{
     box-sizing: border-box;
 }
 .styled-table thead tr {
-    border-bottom: 1px solid #dddddd; 
+    border-bottom: 1px solid #dddddd;
     margin-bottom: 200px;
 }
 .success_status {
     color: #699a5d;
     background-color: #e2f1de;
-    padding: 10px 15px; 
-    border-radius: 5px; 
+    padding: 10px 15px;
+    border-radius: 5px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
-    font-size: 14px; 
+    font-size: 14px;
     /* font-weight: bold; */
-    display: inline-block; 
+    display: inline-block;
     width: auto;
 }
 .failed_status {
@@ -1820,7 +1820,7 @@ button:focus{
     margin: 10% auto;
     animation: slideIn 0.5s ease;
 }
-  
+
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
@@ -1831,7 +1831,7 @@ button:focus{
     border-radius: 10px;
     animation: slideIn 0.5s ease;
   }
-  
+
   /* Close Button */
   .close {
     color: #aaa;
@@ -1840,20 +1840,20 @@ button:focus{
     font-weight: bold;
     transition: color 0.3s ease;
   }
-  
+
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   /* Form Styling */
   .modal_label{
     display: block;
     margin-bottom: 10px;
   }
-  
+
   #email, #amount {
     width: calc(100% - 22px); /* Adjusted width to accommodate padding and border */
     padding: 10px;
@@ -1861,7 +1861,7 @@ button:focus{
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+
   .pay-button {
     background-color: #699a5d;
     color: white;
@@ -1871,7 +1871,7 @@ button:focus{
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   .pay-button:hover {
     background-color: #598b4d;
   }
@@ -1950,7 +1950,7 @@ button:focus{
     width: 20%;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(9, 9, 9, 0.1);
-    height: 100%; 
+    height: 100%;
     max-height: 100vh;
     padding: 20px;
     position: fixed;
@@ -1958,12 +1958,12 @@ button:focus{
     overflow: scroll;
 }
 .side_section::-webkit-scrollbar {
-    width: 0; 
-    background: transparent; 
+    width: 0;
+    background: transparent;
 }
 
 .side_section::-webkit-scrollbar-track {
-    background: transparent; 
+    background: transparent;
 }
 .admin-logo{
     width: 100px;
@@ -2162,7 +2162,7 @@ button:focus{
     margin-top: 20px;
 }
 .withdraw-caution{
-    background-color: #eee; 
+    background-color: #eee;
     color:#699a5d;
     padding:10px;
     font-size:12px;
@@ -2306,7 +2306,7 @@ button:focus{
     display: flex;
     gap: 5px;
     align-items: center;
-} 
+}
 .withdraw_approve{
     background-color: rgba(0, 0, 255, 0.557);
     color: #fff;
@@ -2454,12 +2454,12 @@ button:focus{
     font-size: 14px;
 }
 #notification-side::-webkit-scrollbar {
-    width: 0; 
-    background: transparent; 
+    width: 0;
+    background: transparent;
 }
 
 #notification-side::-webkit-scrollbar-track {
-    background: transparent; 
+    background: transparent;
 }
 .unread_not{
     position: absolute;
@@ -2500,22 +2500,22 @@ button:focus{
     padding: 0px 20px 20px 20px;
     animation: slideIn 0.5s ease;
     overflow: auto;
-}  
+}
 .edit_upload-form::-webkit-scrollbar {
-    width: 0; 
-    background: transparent; 
+    width: 0;
+    background: transparent;
 }
 
 .edit_upload-form::-webkit-scrollbar-track {
-    background: transparent; 
+    background: transparent;
 }
 textarea::-webkit-scrollbar {
-    width: 0; 
-    background: transparent; 
+    width: 0;
+    background: transparent;
 }
 
 textarea::-webkit-scrollbar-track {
-    background: transparent; 
+    background: transparent;
 }
 .edit_upoad-form-header{
     color: #000000c4;
@@ -2647,7 +2647,7 @@ textarea::-webkit-scrollbar-track {
     display: flex;
     gap: 20px;
     align-items: center;
-    
+
 }
 .plan_section_container{
     width: 100%;
@@ -3165,7 +3165,7 @@ textarea::-webkit-scrollbar-track {
 .search_results_image_container img{
     width: 100%;
     height: 100%;
-    object-fit: cover;    
+    object-fit: cover;
     border-radius: 50%;
 }
 .event_results{
@@ -3187,7 +3187,7 @@ textarea::-webkit-scrollbar-track {
 .search_event_title{
     width: 65%;
     display: -webkit-box;
-    -webkit-line-clamp: 3; 
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3480,7 +3480,7 @@ textarea::-webkit-scrollbar-track {
 }
 .your_events_text p{
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3564,7 +3564,7 @@ textarea::-webkit-scrollbar-track {
 }
 .single_upload_title{
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3640,7 +3640,7 @@ textarea::-webkit-scrollbar-track {
     gap: 5px;
 }
 .news-title{
-    font-size:20px; 
+    font-size:20px;
     font-weight:450;
     color:#000000a2;
     display: -webkit-box;
@@ -3756,7 +3756,7 @@ textarea::-webkit-scrollbar-track {
 .course_full_section {
     width: 100%;
     display: grid;
-    grid-template-columns: 350px 1fr;     
+    grid-template-columns: 350px 1fr;
     gap: 25px;
     background-color: #707b88;
     height: auto;
@@ -3765,19 +3765,19 @@ textarea::-webkit-scrollbar-track {
 }
 
 .course_modules {
-    position: sticky; 
-    top: 0; 
+    position: sticky;
+    top: 0;
     overflow: auto;
     max-height: 600px;
 }
 .course_modules::-webkit-scrollbar {
     width: 10px; /* Set the width of the scrollbar */
   }
-  
+
 .course_modules::-webkit-scrollbar-track {
     background: #f1f1f1; /* Set the color of the scrollbar track */
 }
-  
+
 .course_modules::-webkit-scrollbar-thumb {
     background: #888; /* Set the color of the scrollbar thumb */
 }
@@ -3874,7 +3874,7 @@ textarea::-webkit-scrollbar-track {
 .news-title{
     /* width: 65%; */
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3882,7 +3882,7 @@ textarea::-webkit-scrollbar-track {
 .news_clamp{
     /* width: 65%; */
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3890,7 +3890,7 @@ textarea::-webkit-scrollbar-track {
 .news-content{
     /* width: 65%; */
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3902,7 +3902,7 @@ textarea::-webkit-scrollbar-track {
 }
 .providers-contact{
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3995,8 +3995,8 @@ textarea::-webkit-scrollbar-track {
 }
 
 .coming-soon-container img {
-    width: 100%; 
-    max-width: 900px; 
+    width: 100%;
+    max-width: 900px;
 }
 .business-page-section{
     width: 100%;
@@ -4031,7 +4031,7 @@ textarea::-webkit-scrollbar-track {
     padding: 20px;
 }
 .swap-button{
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 6px 12px;
@@ -4042,7 +4042,7 @@ textarea::-webkit-scrollbar-track {
     cursor: pointer;
 }
 .delete-button{
-    background-color: #d9534f; 
+    background-color: #d9534f;
     border: none;
     color: white;
     padding: 6px 12px;
@@ -4068,18 +4068,18 @@ textarea::-webkit-scrollbar-track {
     width: 500px;
     max-height: 600px;
     background-color: #fff;
-    margin: auto; 
+    margin: auto;
     border-radius: 10px;
     padding: 20px;
     animation: slideIn 0.5s ease;
-    overflow-y: auto; 
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .swap-text h1 {
     color: #999;
@@ -4424,7 +4424,7 @@ textarea::-webkit-scrollbar-track {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .category-actions button {
@@ -4604,7 +4604,7 @@ main {
     padding: 0px 20px 20px 20px;
     animation: slideIn 0.5s ease;
     overflow: auto;
-}  
+}
 .change_box_header{
     display: fixed;
     top: 0;
@@ -4629,7 +4629,7 @@ main {
     margin-top: 15px;
 }
 .tutor-background-section {
-    background-image: url('/assets/images/tutor-back.png'); 
+    background-image: url('/assets/images/tutor-back.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -4777,7 +4777,7 @@ main {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  
+
   @keyframes slideIn {
     from { transform: translateY(-50px); }
     to { transform: translateY(0); }
